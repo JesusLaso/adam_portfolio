@@ -246,11 +246,17 @@ body{
     font-size: 1.5em;
     padding-bottom: 0;
 }
+.hero__jump{
+    display: none;
+}
 
 @media (min-width: 768px){
     .header{
         padding: 0;
         overflow: visible;
+    }
+    .header::after{
+        display: none;
     }
     .header__nav{
         background: none;
@@ -258,9 +264,8 @@ body{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        padding: 1.5em 2em;
+        padding: 1.5em 1.7em 1.5em 1.7em;
         margin: 0;
-
         & *{
             margin-bottom: 0;
         }
@@ -273,23 +278,161 @@ body{
         width: 30%;
         align-items: center;
     }
-    .menu::after{
+    .header__menu.menu::after{
         content: "";
         position: absolute;
-        width: 45%;
-        height: 160%;
+        width: 43%;
+        height: 190%;
         background-color: $background-lighter;
-        left: 55.1%;
+        left: 57%;
         z-index: -1;
     }
     .menu__icon{
         font-size: 1.5em;
     }
+    .me{
+        padding: 0;
+        align-items: flex-start;
+    }
+    .hero{
+        margin: 0;
+        padding-top: 3.5em;
+        width: 61.1%;
+        height: 30em;
+        border-bottom: 0;
+        padding-left: 1.7em;
+    }
+    .hero::after{
+        content: "";
+        border: 2px solid $text-ligther;
+        position: absolute;
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+        left: 91.7%;
+        top: 58.5%;
+        z-index: 10;
+    }
     .hero__photo{
         background-color: $background-lighter;
-        left: 55.1%;
-        width: 45%;
+        left: 57%;
+        width: 43%;
         height: 30em;
-        top: 13.8%;
+        top: 15.5%;
+    }
+    .hero__title{
+        font-size: 4.2em;
+        text-align: left;
+        z-index: 100;
+    }
+    .hero__description{
+        text-align: left;
+        font-size: 1.119em;
+        z-index: 100;
+        width: 87.5%;
+        align-self: flex-start;
+    }
+    .hero__link{
+        align-self: flex-start;
+    }
+    .decoration__circles{
+        top: 11%;
+        width: 17em;
+        height: 9.1em;
+    }
+    .hero__jump{
+        display: inline;
+    }
+    .numbers{
+        border: 0;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 93.4%;
+        border-top: 1px solid $text-ligth;
+        align-self: center;
+        padding-top: 3em;
+    }
+    .numbers__container{
+        flex-direction: row;
+        width: 50%;
+        text-align: start;
+    }
+    .numbers__language{
+        font-size: 2.8em;
+    }
+    .numbers__years{
+        font-size: 1.1em;
+        padding-bottom: 4em;
+    }
+    .decoration__circles-projects{
+        bottom: 99.7%;
+        width: 26%;
+    }
+    .projects{
+        padding: 1.7em;
+    }
+    .projects__title{
+        font-size: 1.45em;
+    }
+    .projects__title-link{
+        font-size: .7em;
+    }
+    .projects__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);   
+        gap: 1.7em; 
+    }
+    .contact{
+        padding: 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 6em;
+    }
+    .contact__text{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact__title{
+        font-size: 4em;
+    }
+    .contact__description{
+        width: 65%;
+        align-self: center;
+        font-size: 1.1em;
+    }
+    .contact__enquiry{
+        width: 65%;
+        align-self: center;
+    }
+    .decoration__circles-contact{
+        height: 15em;
+        width: 11em;
+        left: 0;
+        top: 70%;
+    }
+    .footer{
+        padding: 0;
+        padding: 2em 1.7em;
+    }
+    .footer::after{
+        width: 90.5%;
+        left: 3.9%;
+    }
+    .footer__nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer__logo{
+        font-size: 2em;
+        padding: 0;
+        margin: 0;
+    }
+    .footer__icon{
+        font-size: 1em;
     }
 }
