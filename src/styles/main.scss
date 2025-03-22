@@ -246,3 +246,50 @@ body{
     font-size: 1.5em;
     padding-bottom: 0;
 }
+
+@media (min-width: 768px){
+    .header{
+        padding: 0;
+        overflow: visible;
+    }
+    .header__nav{
+        background: none;
+        background-color: $background-dark;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.5em 2em;
+        margin: 0;
+
+        & *{
+            margin-bottom: 0;
+        }
+    }
+    .header__logo{
+        font-size: 2em;
+    }
+    .menu{
+        padding: 0;
+        width: 30%;
+        align-items: center;
+    }
+    .menu::after{
+        content: "";
+        position: absolute;
+        width: 45%;
+        height: 160%;
+        background-color: $background-lighter;
+        left: 55.1%;
+        z-index: -1;
+    }
+    .menu__icon{
+        font-size: 1.5em;
+    }
+    .hero__photo{
+        background-color: $background-lighter;
+        left: 55.1%;
+        width: 45%;
+        height: 30em;
+        top: 13.8%;
+    }
+}
