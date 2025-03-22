@@ -29,7 +29,7 @@ body{
     overflow: hidden;
     padding-bottom: 3.1em;
 }
-.header::after{
+/*.header::after{
     content: "";
     border-radius: 50%;
     position: absolute;
@@ -39,13 +39,19 @@ body{
     top: 59%;
     color: white;
     border: 1px solid white;
-}
+}*/
 .header__nav{
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom, $background-dark, $background-lighter);
     padding: 1em;
     width: 37.7%;
+}
+.decoration__circles-whole{
+    display: none;
+}
+.decoration__circles-contact-whole{
+    display: none;
 }
 .logo{
     color: $text-ligther;
@@ -70,13 +76,14 @@ body{
 .hero{
     display: flex;
     flex-direction: column;   
-    margin-top: 2em;
+    margin-top: calc(4em + 5vw);
     align-items: center;
     height: 30vh;
     justify-content: space-around;
     border-bottom: 1px solid $text-ligther;
     padding-bottom: 4em;
     width: 90%;
+
 }
 .hero__title{
     font-size: 2.14em;
@@ -84,6 +91,7 @@ body{
     color: $text-ligther;
     line-height: 1em;
     position: relative;
+    z-index: 10;
 }
 .hero__title-underline{
     text-decoration: underline $color-primary;
@@ -98,6 +106,7 @@ body{
 .hero__description{
     text-align: center;
     font-size: .9em;
+    z-index: 11;
 }
 .link{
     color: $text-ligther;
@@ -140,9 +149,9 @@ body{
 .decoration__circles-projects{
     position: absolute;
     transform: rotate(180deg);
-    width: 14em;
+    width: 12em;
     right: 0;
-    bottom: 96.4%;
+    bottom: 97.7%;
 }
 .projects__title{
     display: flex;
@@ -302,7 +311,7 @@ body{
         border-bottom: 0;
         padding-left: 1.7em;
     }
-    .hero::after{
+    /*.hero::after{
         content: "";
         border: 2px solid $text-ligther;
         position: absolute;
@@ -312,13 +321,13 @@ body{
         left: 91.7%;
         top: 58.5%;
         z-index: 10;
-    }
+    }*/
     .hero__photo{
         background-color: $background-lighter;
         left: 57%;
         width: 43%;
         height: 30em;
-        top: 15.5%;
+        top: 11.5%;
     }
     .hero__title{
         font-size: 4.2em;
@@ -435,4 +444,161 @@ body{
     .footer__icon{
         font-size: 1em;
     }
+}
+
+@media (min-width:1400px){
+    .header__nav{
+        padding: 3em 10em;
+    }
+    .decoration__circles{
+        display: none;
+    }
+    .decoration__circles-whole{
+        display: inline;
+        width: 27em;
+        height: 27em;
+        position: absolute;
+        bottom: 51%;
+        left: 0;
+    }
+    .header__menu{
+        justify-content: flex-end;
+        padding-right: 2em;
+    }
+    .header__menu.menu::after{
+        left: 59%;
+        width: 27em;
+    }
+    .menu__icon{
+        padding-left: 1em;
+    }
+    .hero{
+        padding: 1.7em 10em;
+        height: 52vh;
+        padding-bottom: 14em;
+    }
+    .hero::after{
+        content: "";
+        border: 1px solid $text-ligther;
+        position: absolute;
+        width: 7em;
+        height: 7em;
+        border-radius: 50%;
+        left: 55%;
+        top: 59%;
+        z-index: 10;
+    }
+    .hero__title{
+        font-size: 5.4em;
+        width: 90%;
+        align-self: start;
+    }
+    .hero__jump{
+        display: none;
+    }
+    .hero__description{
+        width: 55%;
+        font-size: 1.2em;
+    }
+    .hero__photo{
+        left: 59%;
+        width: 27em;
+        height: 33em;
+        top: 20%;
+    }
+    .numbers{
+        width: 77.3%;
+        padding-top: 5em;
+    }
+    .numbers__container{
+        width: 33%;
+    }
+    .numbers__language{
+        padding-bottom: .4em;
+    }
+    .decoration__circles-projects{
+        width: 30em;
+        height: 6em;
+        bottom: 102%;
+    }
+    .projects{
+        padding: 5em 10em;
+
+    }
+    .projects__title{
+        font-size: 2em;
+    }
+    .project{
+        position: relative;
+        height: auto;
+        padding: 0;
+    }
+    .project__title{
+        padding: .7em 0;
+    }
+    .project__image{
+        height: 90%;
+    }
+    .project__langages{
+        padding: 0;
+    }
+    .overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 82.2%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease;
+    }
+    .project__link{
+        margin: 1.2em;
+        font-size: 1.2em;
+    }
+    .project:hover .overlay {
+        opacity: 1;
+      }
+    .contact{
+        flex-direction: row;
+        padding: 5em 10em;
+        align-items: flex-start;
+    }
+    .contact__text{
+        text-align: start;
+    }
+    .contact__title{
+        font-size: 5em;
+    }
+    .contact__description{
+        align-self: flex-start;
+    }
+    .footer{
+        padding: 3em 10em 4em 10em;
+        position: relative;
+    }
+    .footer::after{
+        width: 77.7%;
+        left: 11.5%;
+    }
+    .footer__menu{
+        justify-content: space-between;
+    }
+    .decoration__circles-contact{
+        display: none;
+    }
+    .decoration__circles-contact-whole{
+        display: inline;
+        position: absolute;
+        left: 0;
+        width: 27em;
+        width: 27em;
+        bottom: 14%;
+    }
+
 }
